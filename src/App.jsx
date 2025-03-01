@@ -13,7 +13,8 @@ function App() {
 
   useEffect(() => {
     // Initialize socket connection
-    socketRef.current = io('http://localhost:3000');
+    // socketRef.current = io('http://localhost:3000');
+    socketRef.current = io('https://chat-mini-server.onrender.com/');
 
     // Socket event listeners
     socketRef.current.on('connect', () => {

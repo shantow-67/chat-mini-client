@@ -56,8 +56,12 @@ function App() {
         text,
         timestamp: new Date()
       };
-      socketRef.current.emit('message', message);
-      setMessages((prevMessages) => [...prevMessages, message]);
+      // socketRef.current.emit('message', message);
+      // setMessages((prevMessages) => [...prevMessages, message]);
+
+       // Only emit the message to the server
+       socketRef.current.emit('message', message);
+       // Do NOT add it to the messages state here
     }
   };
 
